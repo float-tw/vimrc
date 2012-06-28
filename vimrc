@@ -59,6 +59,6 @@ set wildmenu
 filetype indent on
 filetype plugin on
 
-
-set list
+" list
+set nolist
 set listchars=tab:>-,trail:-
