@@ -4,7 +4,6 @@ set number
 set showmode
 set shiftwidth=4
 set tabstop=4
-set backspace=indent
 set incsearch
 set hls
 set nocompatible
