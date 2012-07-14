@@ -27,7 +27,7 @@ colorscheme desert
 "colorscheme default
 "set background=light
 "set background=dark
-
+	
 highlight Comment ctermfg=darkcyan
 highlight Search term=reverse ctermbg=4 ctermfg=7
 
@@ -38,7 +38,9 @@ set encoding=utf-8
 
 " map
 nmap <F12> <esc>:TlistToggle<CR><C-w>h
+imap <F12> <esc>:TlistToggle<CR><C-w>h
 nmap <F9> <esc>:set list!<CR>
+imap <F9> <esc>:set list!<CR>
 nmap <F7> gT
 nmap <F8> gt
 
@@ -61,6 +63,7 @@ set wildmode=longest:full
 set wildmenu
 
 " filetype
+filetype on
 filetype indent on
 filetype plugin on
 
