@@ -70,3 +70,8 @@ filetype plugin on
 " list
 set nolist
 set listchars=tab:>-,trail:-
+
+" tab indent
+imap <S-Tab> <C-o><<
+vmap <Tab> >
+vmap <S-Tab> <
