@@ -27,7 +27,7 @@ colorscheme desert
 "colorscheme default
 "set background=light
 "set background=dark
-	
+
 highlight Comment ctermfg=darkcyan
 highlight Search term=reverse ctermbg=4 ctermfg=7
 
@@ -46,7 +46,7 @@ nmap <F8> gt
 
 " status line
 set laststatus=2 "ls=2
-set statusline=%<%F "file name 
+set statusline=%<%F "file name
 set statusline+=\ [%{&fileencoding},%{&fileformat}]
 set statusline+=\ %m "modified
 set statusline+=%= "
@@ -75,3 +75,6 @@ set listchars=tab:>-,trail:-
 imap <S-Tab> <C-o><<
 vmap <Tab> >
 vmap <S-Tab> <
+
+" Syntastic
+let g:syntastic_python_checker = 'pyflakes'
