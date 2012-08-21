@@ -77,4 +77,4 @@ vmap <Tab> >
 vmap <S-Tab> <
 
 " Syntastic
-let g:syntastic_python_checker = 'pyflakes'
+let g:syntastic_auto_loc_list=1
