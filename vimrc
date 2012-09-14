@@ -78,3 +78,9 @@ vmap <S-Tab> <
 
 " Syntastic
 let g:syntastic_auto_loc_list=1
+
+" spell check
+map <F2> :set spell!<CR><Bar>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
+imap <F2> <esc>:set spell!<CR><Bar>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
+hi clear SpellBad
+hi SpellBad term=underline cterm=underline ctermfg=red
