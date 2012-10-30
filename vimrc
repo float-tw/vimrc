@@ -86,3 +86,12 @@ map <F2> :set spell!<CR><Bar>:echo "Spell check: " . strpart("OffOn", 3 * &spell
 imap <F2> <esc>:set spell!<CR><Bar>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
 hi clear SpellBad
 hi SpellBad term=underline cterm=underline ctermfg=red
+
+" auto write python coding info
+function PyHeader()
+	if getfsize(@%) <= 0
+		execute "norm i#!/usr/bin/env python\n# -*- coding: utf-8 -*-"
+	endif
+endfunction
+
+au BufRead,BufNewFile *.py call PyHeader()
