@@ -26,6 +26,13 @@ Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'godlygeek/tabular'
 
+" Plugin settting
+
+" Syntastic
+let g:syntastic_auto_loc_list=1
+
+" tagbar
+let g:tagbar_left=1
 
 set ruler
 set number
@@ -65,8 +72,8 @@ set termencoding=utf-8
 set encoding=utf-8
 
 " map
-nmap <F12> <esc>:TlistToggle<CR><C-w>h
-imap <F12> <esc>:TlistToggle<CR><C-w>h
+nmap <F12> <esc>:Tagbar<CR><C-w>h
+imap <F12> <esc>:Tagbar<CR><C-w>h
 nmap <F9> <esc>:set list!<CR>
 imap <F9> <esc>:set list!<CR>
 nmap <F7> gT
@@ -105,9 +112,6 @@ set listchars=tab:>-,trail:-
 imap <S-Tab> <C-o><<
 vmap <Tab> >
 vmap <S-Tab> <
-
-" Syntastic
-let g:syntastic_auto_loc_list=1
 
 " spell check
 map <F2> :set spell!<CR><Bar>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
