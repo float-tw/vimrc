@@ -25,6 +25,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'godlygeek/tabular'
+Bundle 'float-tw/easyreST'
 
 " Plugin settting
 
