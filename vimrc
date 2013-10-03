@@ -80,6 +80,9 @@ imap <F9> <esc>:set list!<CR>
 nmap <F7> gT
 nmap <F8> gt
 
+" set K use man first then sdcv
+:set keywordprg=bash\ -c\ \'man\ $0\ \|\|\ sdcv\ $0\'
+
 " status line
 set laststatus=2 "ls=2
 set statusline=%<%F "file name
