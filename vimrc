@@ -77,6 +77,7 @@ nmap <F12> <esc>:Tagbar<CR><C-w>h
 imap <F12> <esc>:Tagbar<CR><C-w>h
 nmap <F9> <esc>:set list!<CR>
 imap <F9> <esc>:set list!<CR>
+nmap <F10> <esc>:set paste!<CR>
 nmap <F7> gT
 nmap <F8> gt
 
