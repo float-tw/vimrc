@@ -68,7 +68,7 @@ highlight Comment ctermfg=darkcyan
 highlight Search term=reverse ctermbg=4 ctermfg=7
 
 " encodings
-set fileencodings=ucs-bom,utf-8,gbk,big5
+set fileencodings=ucs-bom,utf-8,big5,gbk
 set termencoding=utf-8
 set encoding=utf-8
 
