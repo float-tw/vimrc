@@ -135,4 +135,11 @@ endfunction
 au BufRead,BufNewFile *.py call PyHeader()
 
 " automatically removing all trailing whitespace
-autocmd FileType c,cpp,python autocmd BufWritePre <buffer> :%s/\s\+$//e | execute "norm ''"
+function TrailingWhitespace()
+	if search('\s\+$', 'wn') != 0
+		execute '%s/\s\+$//e'
+		execute "norm ''"
+	endif
+endfunction
+
+autocmd FileType c,cpp,python autocmd BufWritePre <buffer> call TrailingWhitespace()
