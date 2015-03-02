@@ -145,3 +145,30 @@ function TrailingWhitespace()
 endfunction
 
 autocmd FileType c,cpp,python autocmd BufWritePre <buffer> call TrailingWhitespace()
+
+" less mode
+function! LessMode()
+	if g:lessmode == 0
+		let g:lessmode = 1
+		let onoff = 'on'
+		" Scroll half a page down
+		noremap <script> d <C-D>
+		" Scroll one line down
+		noremap <script> j <C-E>
+		" Scroll half a page up
+		noremap <script> u <C-U>
+		" Scroll one line up
+		noremap <script> k <C-Y>
+	else
+		let g:lessmode = 0
+		let onoff = 'off'
+		unmap d
+		unmap j
+		unmap u
+		unmap k
+	endif
+	echohl Label | echo "Less mode" onoff | echohl None
+endfunction
+let g:lessmode = 0
+nnoremap <F4> :call LessMode()<CR>
+inoremap <F4> <Esc>:call LessMode()<CR>
